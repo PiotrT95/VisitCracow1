@@ -3,13 +3,8 @@ var inAppBrowserRef;
 function changeFunc($value) {
   if($value == "1"){
     draw1();
-	$("p").append("<a onclick='loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/zabytek.html');'>link</a>");
-	//zabytek = "wawel";
-	//localStorage.setItem("monument", zabytek);
   }else if ($value == "2"){
     draw2();
-	zabytek = "smoczajama";
-	//localStorage.setItem("monument", zabytek);
   }else if ($value == "3"){
     draw3();
   }else if ($value == "4"){

@@ -38,15 +38,21 @@
 					</a>
 
 					<br style="clear: both;">
+					
+					<a href="#secondActivity" >
+						<li class="bt">
+							<img class="icon" src="img/info.png" width="30%" heigth="30%" alt="">
+							Opisy
+						</li>
 
-					<a href="#secondActivity">
+					<a href="#thirdActivity">
 						<li class="bt">
 							<img class="icon" src="img/qr.png" width="30%" heigth="30%" alt="">
 							Skaner QR
 						</li>
 					</a>
 
-					<a href="#thirdActivity">
+					<a href="#fourthActivity">
 						<li class="bt">
 							<img class="icon" src="img/navigation.png" width="30%" heigth="30%" alt="">
 							Nawigacja
@@ -56,7 +62,7 @@
 					<br style="clear: both;">
 
 
-					<a href="#fourthActivity" onclick="onContactsActivityReady();">
+					<a href="#fifthActivity" onclick="onContactsActivityReady();">
 						<li class="bt">
 							<img class="icon" src="img/tele.jpg" width="30%" heigth="30%" alt="">
 							Kontakty
@@ -65,13 +71,6 @@
 					
 					<br style="clear: both;">
 
-
-					<a href="#fifthActivity" >
-						<li class="bt">
-							<img class="icon" src="img/tele.jpg" width="30%" heigth="30%" alt="">
-							Opisy
-						</li>
-					</a>
 				</ul>
 			</div>
 
@@ -124,7 +123,10 @@
 					</form>
     			</div>
 
-
+    			<div class="col2">
+					<p>tutaj</p><button type="button" class="building-information-button" id="building-information-button" disabled="disabled" onclick="monumentInfo();"><h1 class="ui-btn-icon-left ui-icon-info ui-alt-icon"> </h1></button>
+    			</div>
+			</div>
 			
   			<div class="canvas">
           		<canvas id="canvas" class="canvas-position" width="0" height="0" style="position: absolute"></canvas>
@@ -134,8 +136,50 @@
         	</div>
 		</div>
 
-		<!-- Start of second page -->
-		<div data-role="page" id="secondActivity">
+<!-- Start of second page -->
+		<div data-role="page" id="secondActivity" >
+
+			<div data-role="header">
+				<a href="#" data-rel="back" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-back"></a>
+ 
+				<h1>Opisy Zabytków</h1>
+			</div>
+			<div class="map-options">
+    			<div class="col1">
+    				<form class="building-form">
+						<div class="ui-field-contain">
+				            	<h2>Wybierz zabytek/miejsce:</h2>
+				            		<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/Wawel.html');">Wawel</a>
+							        <a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/SmoczaJama.html');">Smocza Jama</a>
+									<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/KosciolPiotrPawel.html');">Kościół św. Apostołów Piotra i Pawła</a>
+									<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/Rynek.html');">Rynek Główny</a>
+									<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/Sukienice.html');">Sukienice</a>
+									<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/Wieża.html');">Wieża Ratuszowa</a>
+									<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/Mariacki.html');">Kościół Mariacki</a>
+									<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/Brama.html');">Brama Floriańska</a>
+									<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/Barbakan.html');">Barbakan Krakowski</a>
+									<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/Planty.html');">Planty</a>
+									<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/Teater.html');">Teatr im. Juliusza Słowackiego</a>
+									<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/Plac.html');">Plac Szczepański</a>
+									<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/Okno.html');">Okno Papieskie</a>
+									<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/UJ.html');">Uniwersytet Jagieloński</a>
+
+						</div>
+					</form>
+    			</div>
+
+			</div>
+			
+  			<div class="canvas">
+          		<canvas id="canvas" class="canvas-position" width="0" height="0" style="position: absolute"></canvas>
+          		<script type="text/javascript">
+   				draw();
+				</script>
+        	</div>
+		</div>
+
+		<!-- Start of third page -->
+		<div data-role="page" id="thirdActivity">
 
 			<div data-role="header">
 			<a href="#" data-rel="back" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-back"></a>
@@ -163,8 +207,8 @@
 	    	</div>
 		</div>
 
-		<!-- Start of third page -->
-		<div data-role="page" id="thirdActivity">
+		<!-- Start of fourth page -->
+		<div data-role="page" id="fourthActivity">
 
 			<div data-role="header" data-theme="a">
 				<a href="#" data-rel="back" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-back"></a>				
@@ -353,8 +397,8 @@
 
 		
 
-		<!-- Start of fourth page -->
-		<div data-role="page" id="fourthActivity">
+		<!-- Start of fifth page -->
+		<div data-role="page" id="fifthActivity">
 
 			<div data-role="header" data-theme="a">
 				<a href="#" data-rel="back" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-back"></a>
@@ -374,47 +418,7 @@
   			</div>
 		</div>
 
-		<!-- Start of fifth page -->
-		<div data-role="page" id="fifthActivity" >
-
-			<div data-role="header">
-				<a href="#" data-rel="back" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-back"></a>
- 
-				<h1>Opisy Zabytków</h1>
-			</div>
-			<div class="map-options">
-    			<div class="col1">
-    				<form class="building-form">
-						<div class="ui-field-contain">
-				            	<h2>Wybierz zabytek/miejsce:</h2>
-				            		<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/Wawel.html');">Wawel</a>
-							        <a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/SmoczaJama.html');">Smocza Jama</a>
-									<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/KosciolPiotrPawel.html');">Kościół św. Apostołów Piotra i Pawła</a>
-									<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/Rynek.html');">Rynek Główny</a>
-									<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/Sukienice.html');">Sukienice</a>
-									<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/Wieża.html');">Wieża Ratuszowa</a>
-									<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/Mariacki.html');">Kościół Mariacki</a>
-									<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/Brama.html');">Brama Floriańska</a>
-									<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/Barbakan.html');">Barbakan Krakowski</a>
-									<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/Planty.html');">Planty</a>
-									<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/Teater.html');">Teatr im. Juliusza Słowackiego</a>
-									<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/Plac.html');">Plac Szczepański</a>
-									<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/Okno.html');">Okno Papieskie</a>
-									<a onclick="loadPage('http://wizard.uek.krakow.pl/~s188487/web/zabytki/UJ.html');">Uniwersytet Jagieloński</a>
-
-						</div>
-					</form>
-    			</div>
-
-			</div>
-			
-  			<div class="canvas">
-          		<canvas id="canvas" class="canvas-position" width="0" height="0" style="position: absolute"></canvas>
-          		<script type="text/javascript">
-   				draw();
-				</script>
-        	</div>
-		</div>
+		
 		<!-- Start of building page -->
 		<div data-role="page" id="buildingInformationActivity">
 
